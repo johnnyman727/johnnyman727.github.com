@@ -5,18 +5,17 @@ var contactTextDiv;
 function Initialize() {
     InitializeFadeIn();
     UpdateTwitterFeed();
-    UpdateTumblrFeed();
+    // UpdateTumblrFeed();
     //InitializeScrollDown();
     RegisterEventHandlers();
 }
 function UpdateTwitterFeed() {
     $.jTwitter('jokeAday_mckay', 1, function (userdata) {
         try {
-            $("#TwitterFeedContent")[0].innerHTML = userdata[0].text;
-            $("#TwitterHandle")[0].innerHTML += " || " + FormatTwitterDate(userdata[0].created_at);
+            $("#TwitterFeedContent").text(userdata.results[0].text);
         }
         catch (err) {
-            $("#TwitterFeedContent")[0].innerHTML = "Whoops - there was an error loading my tweets!";
+            $("#TwitterFeedContent").text("Whoops - there was an error loading my tweets!");
         }
 
     });
@@ -35,6 +34,7 @@ function UpdateTumblrFeed(data) {
 }
 function TumblrStrip(post) {
     post = removeHTMLTags(post);
+    console.log("Post", post);
     var postCharLimit = 100;
     var elip = "...";
     var length = post.length;

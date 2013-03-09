@@ -240,17 +240,23 @@ h2#Section
     top: 425px;
 }
 
-#TumblrFeed
+/*#TumblrFeed
+{
+    position:absolute;
+    top: 545px;
+}
+*/
+/*#Linkedin
+{
+    position:absolute;
+    top: 665px;
+}*/
+#Linkedin
 {
     position:absolute;
     top: 545px;
 }
 
-#Linkedin
-{
-    position:absolute;
-    top: 665px;
-}
 
 #HireInfo
 {

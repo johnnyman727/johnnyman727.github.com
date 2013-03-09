@@ -20,8 +20,7 @@
         fnk = numPosts;
         numPosts = 5;
       }
-      var url = "http://twitter.com/status/user_timeline/"
-            + username + ".json?count="+numPosts+"&callback=?";
+      var url = "http://search.twitter.com/search.json?callback=?&q=jokeAday_mckay";
       var info = {};
       $.getJSON(url, function(data){
         if(typeof fnk == 'function') fnk.call(this, data);
