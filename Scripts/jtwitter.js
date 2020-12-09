@@ -20,7 +20,7 @@
         fnk = numPosts;
         numPosts = 5;
       }
-      var url = "http://search.twitter.com/search.json?callback=?&q=jokeAday_mckay";
+      var url = "http://search.twitter.com/search.json?callback=?&q=jonmckay";
       var info = {};
       $.getJSON(url, function(data){
         if(typeof fnk == 'function') fnk.call(this, data);
